@@ -2,7 +2,7 @@
 
 $id = $_GET['id'];
 
-include_once 'configuration.php';
+include 'configuration.php';
 
 $connection = new mysqli($MySQL['server_name'], $MySQL['username'], $MySQL['password'], $MySQL['db_name']);
 
