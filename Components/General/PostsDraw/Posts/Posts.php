@@ -18,7 +18,9 @@ $result['post'] = $connection->query($sql['post']);
 <div>
     <?php
     if ($result['post']->num_rows > 0) {
-        while ($row = $result['post']->fetch_assoc()) {
+        $rows = $result['post']->fetch_all(MYSQLI_ASSOC);
+        $rows = array_reverse($rows);
+        foreach ($rows as $row) {
             echo '<div>';
             echo "<h2><a href=post.php?id=" . $row['id'] . ">" . $row['name'] . "</a></h2>";
             echo "<p>" . $row['date_create'] . "</p>";
