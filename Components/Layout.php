@@ -7,7 +7,7 @@ function layout(string $path, string $title_name = '', string $indent = '')
 
     echo '<html><body>';
 
-    include $indent . 'Components/Header/Header.html';
+    include $indent . 'Components/Header/Header.php';
     include $path;
     include $indent . 'Components/Footer/Footer.php';
 
